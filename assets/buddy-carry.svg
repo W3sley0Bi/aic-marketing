@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" class="anim" role="img" aria-label="The ai-connector plug carrying an old serial connector"><style>@keyframes swing { from { transform: rotate(var(--from)); } to { transform: rotate(var(--to)); } }
+@keyframes bob { from { transform: translateY(0); } to { transform: translateY(-3px); } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-1.5px); } 75% { transform: translateX(1.5px); } }
+@keyframes float-z { from { opacity: 0; transform: translate(0, 4px); } 50% { opacity: 1; } to { opacity: 0; transform: translate(4px, -8px); } }
+.anim .limb { animation: swing var(--dur, .32s) ease-in-out infinite alternate; }
+.anim .bob { animation: bob .16s ease-in-out infinite alternate; }
+.anim .shake { animation: shake .3s linear infinite; }
+.anim .zz { animation: float-z 2.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .anim * { animation: none !important; } }</style><defs>
+<linearGradient id="tile" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="64">
+<stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#3730a3"/>
+</linearGradient>
+<!-- A. Plug: two prongs into a body that holds the AI spark. -->
+<symbol id="mark-plug" viewBox="0 0 64 64">
+<rect x="10" y="23" width="16" height="5" rx="2.5" fill="currentColor"/>
+<rect x="10" y="36" width="16" height="5" rx="2.5" fill="currentColor"/>
+<path d="M24 16h10a16 16 0 0 1 0 32H24z" fill="currentColor"/>
+<path d="M35 23Q35 32 44 32Q35 32 35 41Q35 32 26 32Q35 32 35 23Z" style="fill:var(--cut, url(#tile))"/>
+</symbol>
+<!-- Depth: shared paints and filters for the dimensional plug variants. -->
+<linearGradient id="tile-deep" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64">
+<stop offset="0" stop-color="#7c7ff8"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#312e81"/>
+</linearGradient>
+<radialGradient id="tile-night" gradientUnits="userSpaceOnUse" cx="34" cy="30" r="44">
+<stop offset="0" stop-color="#3b3a8f"/><stop offset=".6" stop-color="#1e1b4b"/><stop offset="1" stop-color="#0c0a24"/>
+</radialGradient>
+<linearGradient id="sheen" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="30">
+<stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="rim" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64">
+<stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".4" stop-color="#fff" stop-opacity=".08"/>
+<stop offset="1" stop-color="#000" stop-opacity=".25"/>
+</linearGradient>
+<linearGradient id="body" gradientUnits="userSpaceOnUse" x1="0" y1="16" x2="0" y2="48">
+<stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#eceeff"/><stop offset="1" stop-color="#c9cdf7"/>
+</linearGradient>
+<linearGradient id="metal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="5">
+<stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#c3c8d6"/>
+<stop offset=".7" stop-color="#8d94a8"/><stop offset="1" stop-color="#e3e6ee"/>
+</linearGradient>
+<linearGradient id="carve" gradientUnits="userSpaceOnUse" x1="0" y1="23" x2="0" y2="41">
+<stop offset="0" stop-color="#312e81"/><stop offset="1" stop-color="#6366f1"/>
+</linearGradient>
+<radialGradient id="ember" gradientUnits="userSpaceOnUse" cx="35" cy="32" r="9">
+<stop offset="0" stop-color="#fffbeb"/><stop offset=".45" stop-color="#fcd34d"/><stop offset="1" stop-color="#f59e0b"/>
+</radialGradient>
+<!-- Old to new: tile turns from legacy stone (left) to AI indigo (right). -->
+<linearGradient id="tile-shift" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="64" y2="44">
+<stop offset="0" stop-color="#a8a29e"/><stop offset=".38" stop-color="#8580b4"/>
+<stop offset=".7" stop-color="#4f46e5"/><stop offset="1" stop-color="#312e81"/>
+</linearGradient>
+<!-- Mascot paints. Bounding-box gradients so they scale with the shape. -->
+<linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#f5f5f4"/><stop offset=".5" stop-color="#d6d3d1"/><stop offset="1" stop-color="#a8a29e"/>
+</linearGradient>
+<linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#eef0ff"/><stop offset="1" stop-color="#c7cbf5"/>
+</linearGradient>
+<linearGradient id="head-off" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#f5f5f4"/><stop offset="1" stop-color="#bdb8b3"/>
+</linearGradient>
+<linearGradient id="prong" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#9aa1b4"/><stop offset=".35" stop-color="#ffffff"/>
+<stop offset=".7" stop-color="#c3c8d6"/><stop offset="1" stop-color="#7d8499"/>
+</linearGradient>
+<!-- Cord: legacy grey at the far end, indigo where it meets the AI head. -->
+<linearGradient id="cord" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="32" y2="0">
+<stop offset="0" stop-color="#a8a29e"/><stop offset="1" stop-color="#a5b4fc"/>
+</linearGradient>
+<linearGradient id="cord-long" gradientUnits="userSpaceOnUse" x1="42" y1="0" x2="130" y2="0">
+<stop offset="0" stop-color="#a8a29e"/><stop offset=".5" stop-color="#b9b6cf"/><stop offset="1" stop-color="#a5b4fc"/>
+</linearGradient>
+<!-- Rendered (3D) plug materials. Bounding-box gradients: light comes from the top left. -->
+<radialGradient id="tile-light" gradientUnits="userSpaceOnUse" cx="22" cy="16" r="62">
+<stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#eff0fa"/><stop offset="1" stop-color="#d8dbef"/>
+</radialGradient>
+<linearGradient id="front-porc" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#f1f2fa"/><stop offset="1" stop-color="#c9cce6"/>
+</linearGradient>
+<linearGradient id="top-porc" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6e7f5"/>
+</linearGradient>
+<linearGradient id="front-ind" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#8f93fb"/><stop offset=".5" stop-color="#5a52ea"/><stop offset="1" stop-color="#2f2a85"/>
+</linearGradient>
+<linearGradient id="top-ind" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#b4b7ff"/><stop offset="1" stop-color="#7471f2"/>
+</linearGradient>
+<linearGradient id="front-off" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#f5f5f4"/><stop offset="1" stop-color="#b3aea8"/>
+</linearGradient>
+<linearGradient id="top-off" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#fafaf9"/><stop offset="1" stop-color="#d6d3d1"/>
+</linearGradient>
+<linearGradient id="side-shade" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".1" stop-color="#fff" stop-opacity="0"/>
+<stop offset=".72" stop-color="#1e1b4b" stop-opacity="0"/><stop offset="1" stop-color="#1e1b4b" stop-opacity=".2"/>
+</linearGradient>
+<linearGradient id="bottom-ao" x1="0" y1="0" x2="0" y2="1">
+<stop offset=".55" stop-color="#1e1b4b" stop-opacity="0"/><stop offset="1" stop-color="#1e1b4b" stop-opacity=".22"/>
+</linearGradient>
+<linearGradient id="blade" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#666d82"/><stop offset=".3" stop-color="#e6e9f1"/><stop offset=".42" stop-color="#ffffff"/>
+<stop offset=".7" stop-color="#a6acbe"/><stop offset="1" stop-color="#585f73"/>
+</linearGradient>
+<linearGradient id="rubber" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#46424c"/><stop offset=".38" stop-color="#8f8a96"/><stop offset="1" stop-color="#55505b"/>
+</linearGradient>
+<linearGradient id="flange" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#f1f2f5"/><stop offset=".5" stop-color="#b9bdc9"/><stop offset="1" stop-color="#7e8496"/>
+</linearGradient>
+<radialGradient id="spark3d" cx=".4" cy=".35" r=".7">
+<stop offset="0" stop-color="#fffbeb"/><stop offset=".45" stop-color="#fcd34d"/><stop offset="1" stop-color="#f59e0b"/>
+</radialGradient>
+<!-- Cord rubber: legacy grey at the far end, turning indigo-tinted near the new plug. -->
+<linearGradient id="cord-3d" gradientUnits="userSpaceOnUse" x1="18" y1="0" x2="60" y2="0">
+<stop offset="0" stop-color="#8a8590"/><stop offset="1" stop-color="#aaa7d2"/>
+</linearGradient>
+<linearGradient id="cord-3d-long" gradientUnits="userSpaceOnUse" x1="56" y1="0" x2="160" y2="0">
+<stop offset="0" stop-color="#8a8590"/><stop offset="1" stop-color="#aaa7d2"/>
+</linearGradient>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+<filter id="shadow" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="3.5"/></filter>
+<filter id="lift" x="-30%" y="-30%" width="160%" height="170%">
+<feDropShadow dx="0" dy="2.5" stdDeviation="2.2" flood-color="#1e1b4b" flood-opacity=".5"/>
+</filter>
+<filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+<feGaussianBlur stdDeviation="2.4" result="b"/>
+<feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<!-- Buddy (v2): body outline used to clip the cel shading. -->
+<clipPath id="buddy-clip"><rect x="33" y="42" width="54" height="46" rx="15"/></clipPath>
+</defs><g class=""><g transform="">
+<ellipse cx="60" cy="120" rx="28" ry="3.5" fill="#1e1b4b" opacity=".12"/>
+<path d="M40 84C26 88 24 112 6 116" stroke="#1e1b4b" stroke-width="7.5" stroke-linecap="round" fill="none"/>
+<path d="M40 84C26 88 24 112 6 116" stroke="#a8a29e" stroke-width="3.5" stroke-linecap="round" fill="none"/><g class=""><g transform="translate(50 86)"><g transform="rotate(4)">
+<path d="M0 0Q2.5 8.5 0 17" stroke="#1e1b4b" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M0 0Q2.5 8.5 0 17" stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+<ellipse cx="3" cy="18" rx="6.5" ry="3.8" fill="#4f46e5" stroke="#1e1b4b" stroke-width="2.5" stroke-linejoin="round"/></g></g><g transform="translate(70 86)"><g transform="rotate(-4)">
+<path d="M0 0Q2.5 8.5 0 17" stroke="#1e1b4b" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M0 0Q2.5 8.5 0 17" stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+<ellipse cx="3" cy="18" rx="6.5" ry="3.8" fill="#4f46e5" stroke="#1e1b4b" stroke-width="2.5" stroke-linejoin="round"/></g></g><path d="M44 41V22.5a4.5 4.5 0 0 1 9 0V41z" fill="url(#blade)" stroke="#1e1b4b" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M46.8 23v15" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".85"/><path d="M67 41V22.5a4.5 4.5 0 0 1 9 0V41z" fill="url(#blade)" stroke="#1e1b4b" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M69.8 23v15" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>
+<rect x="40" y="36" rx="5" fill="#ffffff" stroke="#1e1b4b" stroke-width="3" stroke-linejoin="round"/>
+<g clip-path="url(#buddy-clip)">
+<rect x="33" y="42" width="54" height="46" fill="#c9cdf5"/>
+<rect x="28" y="37" width="54" height="46" rx="15" fill="#ffffff"/>
+</g>
+<rect x="33" y="42" width="54" height="46" rx="15" fill="none" stroke="#1e1b4b" stroke-width="3" stroke-linejoin="round"/>
+<path d="M40 52q2-5 7-6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+<ellipse cx="51" cy="62" rx="3.6" ry="4.6" fill="#1e1b4b"/><circle cx="52.2" cy="60.2" r="1.3" fill="#fff"/><ellipse cx="69" cy="62" rx="3.6" ry="4.6" fill="#1e1b4b"/><circle cx="70.2" cy="60.2" r="1.3" fill="#fff"/><path d="M54 72Q60 77.5 66 72" stroke="#1e1b4b" stroke-width="2.8" stroke-linecap="round" fill="none"/><ellipse cx="42.5" cy="70" rx="3.4" ry="2" fill="#a5b4fc"/><ellipse cx="77.5" cy="70" rx="3.4" ry="2" fill="#a5b4fc"/><path d="M99 18Q99 26 107 26Q99 26 99 34Q99 26 91 26Q99 26 99 18Z" fill="#fcd34d" stroke="#1e1b4b" stroke-width="2.2" stroke-linejoin="round"/><g transform="translate(35 66)"><g transform="rotate(18)">
+<path d="M0 0Q2.5 10 0 20" stroke="#1e1b4b" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M0 0Q2.5 10 0 20" stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+<circle cx="0" cy="20" r="4.6" fill="#fff" stroke="#1e1b4b" stroke-width="2.5" stroke-linejoin="round"/></g></g><g transform="translate(85 66)"><g transform="rotate(-62)">
+<path d="M0 0Q2.5 10 0 20" stroke="#1e1b4b" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M0 0Q2.5 10 0 20" stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+<g transform="translate(0 24) rotate(62) scale(1.45)">
+<path d="M-9 -6h18l-2.5 12h-13z" fill="#d6d3d1" stroke="#1e1b4b" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="-5" cy="-1.5" r="1" fill="#1e1b4b"/><circle cx="-1.7" cy="-1.5" r="1" fill="#1e1b4b"/><circle cx="1.7" cy="-1.5" r="1" fill="#1e1b4b"/><circle cx="5" cy="-1.5" r="1" fill="#1e1b4b"/>
+<circle cx="-3.3" cy="2.5" r="1" fill="#1e1b4b"/><circle cx="0" cy="2.5" r="1" fill="#1e1b4b"/><circle cx="3.3" cy="2.5" r="1" fill="#1e1b4b"/></g><circle cx="0" cy="20" r="4.6" fill="#fff" stroke="#1e1b4b" stroke-width="2.5" stroke-linejoin="round"/></g></g></g>
+</g></g></svg>

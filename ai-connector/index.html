@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ai-connector: your on-premise software, powered by AI</title>
+  <meta name="description" content="Connect the database behind your business software to Claude. Read-only, no firewall port to open, nothing to migrate.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/site.css">
+  <meta property="og:title" content="ai-connector by DevAlps">
+  <meta property="og:description" content="Your on-premise software, powered by AI. Read-only, outbound only.">
+  <meta property="og:image" content="https://devalps.com/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="../assets/logo.svg" alt=""><span><b>ai</b>-connector</span></a>
+    <nav class="menu" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#security">Security</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="actions">
+      <a class="btn btn-sm" href="https://aic.devalps.com/login">Sign in</a>
+      <a class="btn btn-sm btn-primary" href="https://aic.devalps.com/signup">Get started</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">by DevAlps</span>
+        <h1>Your on-premise software, <em>powered by AI</em>.</h1>
+        <p class="lead">ai-connector plugs the database behind your business software into Claude. Ask questions in plain language and get answers from your real data, without moving it to the cloud.</p>
+        <div class="cta">
+          <a class="btn btn-primary btn-lg" href="https://aic.devalps.com/signup">Get started</a>
+          <a class="btn btn-lg" href="#how">See how it works</a>
+        </div>
+        <div class="note"><span>Read-only</span><span>No port to open</span><span>Nothing to migrate</span></div>
+      </div>
+      <div class="hero-art">
+        <img src="../assets/buddy-wave.svg" alt="The ai-connector plug mascot waving hello" width="420" height="455">
+      </div>
+    </div>
+    <div class="wrap track-wrap">
+      <div class="track" aria-hidden="true"><div class="runner"><img src="../assets/buddy-run.svg" alt="" width="96" height="104"></div></div>
+    </div>
+  </section>
+
+  <section class="alt" aria-label="Example">
+    <div class="wrap">
+      <div class="chat">
+        <div class="bubble me">Who were our top 3 customers this quarter, before tax?</div>
+        <div class="tool"><i></i>ai-connector · EBP Bâtiment · read-only query</div>
+        <div class="bubble ai">
+          Invoices minus credit notes, excluding VAT:
+          <table>
+            <tr><td>SCI Les Terrasses</td><td>48 250 €</td></tr>
+            <tr><td>Mairie de Saint-Rémy</td><td>31 900 €</td></tr>
+            <tr><td>Martin Rénovation</td><td>22 480 €</td></tr>
+          </table>
+        </div>
+      </div>
+      <p class="caption">Example conversation in Claude, with ai-connector reading an EBP Bâtiment database.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">How it works</span>
+        <h2>Plugged in, in three steps</h2>
+        <p class="lead">No integrator, no cloud migration. Your software keeps running exactly as it does today.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="step-n">1</span>
+          <h3>Install the connector</h3>
+          <p>Run one command on the Windows or Linux server next to your database. A guided setup checks the connection and helps you create a read-only database login.</p>
+        </div>
+        <div class="card">
+          <span class="step-n">2</span>
+          <h3>Pair it with your account</h3>
+          <p>Enter the pairing code from your dashboard. The connector recognizes your software and what its tables mean.</p>
+        </div>
+        <div class="card">
+          <span class="step-n">3</span>
+          <h3>Ask Claude</h3>
+          <p>Add ai-connector to Claude as a custom connector, then ask about clients, quotes, invoices or stock in plain language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="security" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Security</span>
+        <h2>Built so your IT can say yes</h2>
+        <p class="lead">Your database never faces the internet, and the AI can look but never touch.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+          <h3>Outbound only</h3>
+          <p>The connector only makes outgoing HTTPS connections. No inbound port, no VPN, and it works through company proxies.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+          <h3>Read-only, enforced on your server</h3>
+          <p>The connector itself refuses any query that could change data, so even our cloud cannot make it write.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+          <h3>Your data is not stored</h3>
+          <p>Results pass through to your assistant. We keep an audit log of which queries ran, never the rows they returned.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9"/><path d="M6.3 7.5a8 8 0 1 0 11.4 0"/></svg></div>
+          <h3>One switch to cut access</h3>
+          <p>Stop the connector service and access ends immediately. Run <code>aic service stop</code> or use Windows Services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Knowledge packs</span>
+        <h2>It already knows your software</h2>
+        <p class="lead">A raw database is full of cryptic table names. ai-connector recognizes your application and tells the AI what everything means.</p>
+        <ul class="ticks">
+          <li>EBP Bâtiment supported today: quotes, orders, invoices, credit notes, customers, salespeople</li>
+          <li>Ready-made, checked queries for sales per month, per customer and per salesperson</li>
+          <li>Any SQL Server or PostgreSQL database works, pack or not</li>
+          <li>More business applications on the way</li>
+        </ul>
+      </div>
+      <pre class="schema" aria-label="Example of what the knowledge pack explains"><span class="c">-- what the AI sees without a pack</span>
+<span class="k">SELECT</span> * <span class="k">FROM</span> SaleDocument <span class="k">WHERE</span> DocumentType = 2
+
+<span class="c">-- what the knowledge pack adds</span>
+<span class="s">DocumentType</span>       1 = quote, 8 = order, 2 = invoice, 3 = credit note
+<span class="s">AmountVatExcluded</span>  before tax, negative on credit notes
+<span class="s">ColleagueId</span>        the salesperson
+<span class="s">xx_*</span>               your company's own custom fields</pre>
+    </div>
+  </section>
+
+  <section id="integrations" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Integrations</span>
+        <h2>Works with what you run</h2>
+      </div>
+      <h3>Available now</h3>
+      <div class="chips">
+        <span class="chip live">Claude</span>
+        <span class="chip live">Microsoft SQL Server</span>
+        <span class="chip live">PostgreSQL</span>
+        <span class="chip live">EBP Bâtiment</span>
+        <span class="chip live">Shared folders</span>
+        <span class="chip live">MEGA</span>
+        <span class="chip live">Aruba DNS</span>
+      </div>
+      <h3>Coming soon</h3>
+      <div class="chips">
+        <span class="chip soon">ChatGPT</span>
+        <span class="chip soon">Microsoft Copilot</span>
+        <span class="chip soon">Google Gemini</span>
+        <span class="chip soon">MySQL</span>
+        <span class="chip soon">MariaDB</span>
+        <span class="chip soon">Oracle</span>
+        <span class="chip soon">Sage</span>
+        <span class="chip soon">Odoo</span>
+        <span class="chip soon">QuickBooks</span>
+        <span class="chip soon">HubSpot</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow">Pricing</span>
+        <h2>Simple plans, no surprises</h2>
+        <p class="lead">Every plan includes a built-in AI assistant and works with your own Claude. 7-day free trial, 2 months free with annual billing.</p>
+      </div>
+      <div class="billing" role="group" aria-label="Billing period">
+        <button type="button" data-period="m" aria-pressed="true">Monthly</button>
+        <button type="button" data-period="y" aria-pressed="false">Yearly <span class="save">2 months free</span></button>
+      </div>
+      <div class="plans">
+        <div class="card plan">
+          <div><h3>Basic</h3><p class="who">One person, one business system.</p></div>
+          <div class="price"><strong data-m="€19" data-y="€190">€19</strong><span data-m="per month, excl. VAT" data-y="per year, excl. VAT">per month, excl. VAT</span></div>
+          <p class="annual" data-m="Save 2 months with yearly billing" data-y="€15.83 per month, billed yearly">Save 2 months with yearly billing</p>
+          <a class="btn btn-block" href="https://aic.devalps.com/signup">Start free trial</a>
+          <ul class="ticks">
+            <li>1 data source, 1 user</li>
+            <li>300 AI questions per month</li>
+            <li>Works with your own Claude</li>
+            <li>Email support</li>
+          </ul>
+        </div>
+        <div class="card plan featured">
+          <span class="badge">Most popular</span>
+          <div><h3>Pro</h3><p class="who">A small team working across a few systems.</p></div>
+          <div class="price"><strong data-m="€59" data-y="€590">€59</strong><span data-m="per month, excl. VAT" data-y="per year, excl. VAT">per month, excl. VAT</span></div>
+          <p class="annual" data-m="Save 2 months with yearly billing" data-y="€49.17 per month, billed yearly">Save 2 months with yearly billing</p>
+          <a class="btn btn-primary btn-block" href="https://aic.devalps.com/signup">Start free trial</a>
+          <ul class="ticks">
+            <li>3 data sources, 3 users</li>
+            <li>1,000 AI questions per month</li>
+            <li>Shared folders and cloud drives</li>
+            <li>Priority email support</li>
+          </ul>
+        </div>
+        <div class="card plan">
+          <div><h3>Team</h3><p class="who">More systems, and control over who sees what.</p></div>
+          <div class="price"><strong data-m="€129" data-y="€1,290">€129</strong><span data-m="per month, excl. VAT" data-y="per year, excl. VAT">per month, excl. VAT</span></div>
+          <p class="annual" data-m="Save 2 months with yearly billing" data-y="€107.50 per month, billed yearly">Save 2 months with yearly billing</p>
+          <a class="btn btn-block" href="https://aic.devalps.com/signup">Start free trial</a>
+          <ul class="ticks">
+            <li>10 data sources, 10 users</li>
+            <li>3,000 AI questions per month</li>
+            <li>Audit log and user roles</li>
+            <li>Setup call with your IT</li>
+          </ul>
+        </div>
+        <div class="card plan">
+          <div><h3>Enterprise</h3><p class="who">Many sites or users, or IT providers serving their clients.</p></div>
+          <div class="price"><strong>Custom</strong></div>
+          <p class="annual">Priced to your sites, users and setup</p>
+          <a class="btn btn-block" href="mailto:hello@devalps.com?subject=ai-connector%20enterprise">Talk to sales</a>
+          <ul class="ticks">
+            <li>Unlimited users and AI questions</li>
+            <li>SLA and custom setup</li>
+            <li>Volume pricing for resellers</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine"><a href="pricing/">Compare plans and pricing questions →</a></p>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions IT usually asks</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Do we need to open a port on our firewall?</summary>
+          <p>No. The connector dials out over HTTPS (port 443), like a browser. Nothing on the internet can connect to your server.</p>
+        </details>
+        <details>
+          <summary>Can the AI change or delete our data?</summary>
+          <p>No. The connector checks every query on your server and refuses anything that writes. We recommend a dedicated read-only database login (setup helps create one), and PostgreSQL queries also run in a read-only transaction.</p>
+        </details>
+        <details>
+          <summary>Do you store our data?</summary>
+          <p>No. Query results go straight to your assistant. We keep an audit log with the query text and time, so you can see what was asked, but never the results.</p>
+        </details>
+        <details>
+          <summary>Which AI assistants are supported?</summary>
+          <p>Every plan includes a built-in AI assistant, so you need no other subscription. If your team uses Claude, connect it too: claude.ai, Claude Desktop and the mobile apps, through custom connectors. ChatGPT, Copilot and Gemini are on the way.</p>
+        </details>
+        <details>
+          <summary>What do we need to install it?</summary>
+          <p>A Windows or Linux machine that can reach your database, and an administrator to run the guided setup. No change to your business software.</p>
+        </details>
+        <details>
+          <summary>How do we stop it?</summary>
+          <p>Stop the connector service, from Windows Services or with <code>aic service stop</code>. Access ends immediately.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <div class="box">
+        <img class="box-buddy" src="../assets/buddy-carry.svg" alt="The ai-connector plug carrying an old serial connector" width="150" height="163">
+        <h2>Give your software a brain</h2>
+        <p>Keep the tools your team knows. Let AI read them for you.</p>
+        <div class="cta-row">
+          <a class="btn btn-lg" href="https://aic.devalps.com/signup">Get started</a>
+          <a class="btn btn-lg" href="pricing/">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 DevAlps · <a href="../">devalps.com</a></span>
+    <nav aria-label="Footer"><a href="pricing/">Pricing</a><a href="https://aic.devalps.com/login">Sign in</a></nav>
+  </div>
+</footer>
+
+<script src="../assets/billing.js"></script>
+
+</body>
+</html>
